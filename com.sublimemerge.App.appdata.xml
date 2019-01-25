@@ -25,6 +25,25 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release date="2019-01-24" version="0.1103">
+      <description>
+        <p>BUILD 1103</p>
+        <ul>
+          <li>New Preferences Dialog</li>
+          <li>New Merge Dialog</li>
+          <li>Added support for includeIf in Git config files</li>
+          <li>Various syntax highlighting improvements</li>
+          <li>Improved IME compatibility</li>
+          <li>Added Navigate to Branch</li>
+          <li>Added Navigate to Tag</li>
+          <li>Added Set Branch Upstream to the Command Palette</li>
+          <li>Added Hide Branch to the branch context menu</li>
+          <li>Added Hard Reset option to the diverged banner</li>
+          <li>The diverged banner now shows the exact git commands that will be run in tooltips</li>
+          <li>Improved behavior of clone dialog when selecting a target directory</li>
+        </ul>
+      </description>
+    </release>
     <release date="2018-12-06" version="0.1097">
       <description>
         <p>BUILD 1097</p>

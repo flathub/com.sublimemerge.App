@@ -50,6 +50,8 @@ modules:
         size: 4135332
       - type: file
         path: com.sublimemerge.App.appdata.xml
+      - type: file
+        path: com.sublimemerge.App.png
     build-commands:
       - mkdir -p /app/bin
       - mkdir -p /app/lib

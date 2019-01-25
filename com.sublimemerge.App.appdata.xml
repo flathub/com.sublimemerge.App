@@ -24,6 +24,11 @@
       <image type="source">https://raw.githubusercontent.com/flathub/com.sublimemerge.App/master/screenshot-conflict.png</image>
     </screenshot>
   </screenshots>
+  <categories>
+    <category>Development</category>
+    <category>Utility</category>
+    <category>RevisionControl</category>
+  </categories>
   <releases>
     <release date="2019-01-24" version="0.1103">
       <description>

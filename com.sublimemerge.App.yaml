@@ -56,3 +56,4 @@ modules:
       - install apply_extra /app/bin
       - install sublime_merge.sh /app/bin/sublime_merge
       - install -Dm644 com.sublimemerge.App.appdata.xml /app/share/appdata/com.sublimemerge.App.appdata.xml
+      - install -Dm644 com.sublimemerge.App.png /app/share/icons/hicolor/128x128/apps/com.sublimemerge.App.png

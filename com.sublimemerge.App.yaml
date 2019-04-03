@@ -18,6 +18,16 @@ finish-args:
   - --own-name=com.sublimemerge  # app doesn't follow the app ID spec
 
 modules:
+  - name: git-lfs
+    buildsystem: simple
+    build-commands:
+      - mkdir -p /app/libexec/git-lfs/
+      - install -Dm755 git-lfs /app/libexec/git-lfs/
+    sources:
+      - type: archive
+        strip-components: 0
+        url: https://github.com/git-lfs/git-lfs/releases/download/v2.7.1/git-lfs-linux-amd64-v2.7.1.tar.gz
+        sha256: 7be85238cbbb957ab25de52b60279d40ba40d3faa72eeb2cb9fa77d6d92381e5
   - name: sublime_merge
     buildsystem: simple
     sources:
@@ -41,6 +51,8 @@ modules:
       - type: script
         dest-filename: sublime_merge.sh
         commands:
+          - export PATH="$PATH:/app/libexec/git-lfs"
+          - /app/libexec/git-lfs/git-lfs install --system >/dev/null
           - exec /app/extra/bin/smerge $@
       - type: extra-data
         only-arches: ["x86_64"]

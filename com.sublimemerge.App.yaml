@@ -52,7 +52,6 @@ modules:
         dest-filename: sublime_merge.sh
         commands:
           - export PATH="$PATH:/app/libexec/git-lfs"
-          - /app/libexec/git-lfs/git-lfs install --system >/dev/null
           - exec /app/extra/bin/smerge $@
       - type: extra-data
         only-arches: ["x86_64"]

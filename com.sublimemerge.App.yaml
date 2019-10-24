@@ -1,10 +1,9 @@
 ---
 app-id: com.sublimemerge.App
-branch: stable
 command: sublime_merge
 
 runtime: org.freedesktop.Sdk
-runtime-version: '18.08'
+runtime-version: '19.08'
 sdk: org.freedesktop.Sdk
 
 separate-locales: false
@@ -30,6 +29,18 @@ modules:
         sha256: 7be85238cbbb957ab25de52b60279d40ba40d3faa72eeb2cb9fa77d6d92381e5
   - name: sublime_merge
     buildsystem: simple
+    build-commands:
+      - mkdir -p /app/bin
+      - mkdir -p /app/lib
+      - install sublime_merge.sh /app/bin/sublime_merge
+      - install -Dm644 ${FLATPAK_ID}.appdata.xml /app/share/appdata/${FLATPAK_ID}.appdata.xml
+      - install -Dm644 ${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop
+     
+      - for s in {32,64,128,256,512}; do
+        convert "${FLATPAK_ID}.png" -resize "${s}" "${FLATPAK_ID}-${s}.png";
+        install -Dm644 "${FLATPAK_ID}-${s}.png" "/app/share/icons/hicolor/${s}x${s}/apps/${FLATPAK_ID}.png";
+        done;  
+      - install apply_extra /app/bin
     sources:
       - type: script
         dest-filename: apply_extra
@@ -40,13 +51,6 @@ modules:
           - rm -f control.tar.xz data.tar.xz debian-binary
           - mv usr/* .
           - rmdir usr
-          - install -Dm644 share/applications/sublime_merge.desktop export/share/applications/com.sublimemerge.App.desktop
-          - desktop-file-edit --set-key=Icon --set-value=com.sublimemerge.App --set-key=Exec --set-value=sublime_merge --set-key=Categories --set-value='Development;Utility;RevisionControl;' export/share/applications/com.sublimemerge.App.desktop
-          - install -Dm644 share/icons/hicolor/16x16/apps/sublime-merge.png export/share/icons/hicolor/16x16/apps/com.sublimemerge.App.png
-          - install -Dm644 share/icons/hicolor/32x32/apps/sublime-merge.png export/share/icons/hicolor/32x32/apps/com.sublimemerge.App.png
-          - install -Dm644 share/icons/hicolor/48x48/apps/sublime-merge.png export/share/icons/hicolor/48x48/apps/com.sublimemerge.App.png
-          - install -Dm644 share/icons/hicolor/128x128/apps/sublime-merge.png export/share/icons/hicolor/128x128/apps/com.sublimemerge.App.png
-          - install -Dm644 share/icons/hicolor/256x256/apps/sublime-merge.png export/share/icons/hicolor/256x256/apps/com.sublimemerge.App.png
           - sed -i 's:/opt/sublime_merge/sublime_merge:/app/extra/opt/sublime_merge/sublime_merge:' /app/extra/bin/smerge
       - type: script
         dest-filename: sublime_merge.sh
@@ -62,11 +66,19 @@ modules:
       - type: file
         path: com.sublimemerge.App.appdata.xml
       - type: file
+        path: com.sublimemerge.App.desktop
+      - type: file
         path: com.sublimemerge.App.png
-    build-commands:
-      - mkdir -p /app/bin
-      - mkdir -p /app/lib
-      - install apply_extra /app/bin
-      - install sublime_merge.sh /app/bin/sublime_merge
-      - install -Dm644 com.sublimemerge.App.appdata.xml /app/share/appdata/com.sublimemerge.App.appdata.xml
-      - install -Dm644 com.sublimemerge.App.png /app/share/icons/hicolor/128x128/apps/com.sublimemerge.App.png
+    modules:
+      - name: ImageMagick
+        config-opts:
+          - --disable-static
+          - --disable-docs
+          - --with-hdri
+          - --with-pic
+        sources:
+          - type: archive
+            url: https://github.com/ImageMagick/ImageMagick/archive/7.0.8-65.tar.gz
+            sha256: 14afaf722d8964ed8de2ebd8184a229e521f1425e18e7274806f06e008bf9aa7
+        cleanup:
+          - '*'

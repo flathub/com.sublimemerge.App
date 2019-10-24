@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component type="desktop">
+<component type="desktop-application">
   <id>com.sublimemerge.App</id>
   <name>Sublime Merge</name>
   <project_license>LicenseRef-proprietary=https://www.sublimetext.com/eula</project_license>
@@ -24,11 +24,6 @@
       <image type="source">https://raw.githubusercontent.com/flathub/com.sublimemerge.App/master/screenshot-conflict.png</image>
     </screenshot>
   </screenshots>
-  <categories>
-    <category>Development</category>
-    <category>Utility</category>
-    <category>RevisionControl</category>
-  </categories>
   <releases>
     <release date="2019-01-24" version="0.1103">
       <description>

@@ -33,7 +33,7 @@ modules:
       - mkdir -p /app/bin
       - mkdir -p /app/lib
       - install sublime_merge.sh /app/bin/sublime_merge
-      - install -Dm644 ${FLATPAK_ID}.appdata.xml /app/share/appdata/${FLATPAK_ID}.appdata.xml
+      - install -Dm644 ${FLATPAK_ID}.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml
       - install -Dm644 ${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop
      
       - for s in {32,64,128,256,512}; do
@@ -64,7 +64,7 @@ modules:
         sha256: 3751686d052d74515ab7c8905d87c8a064d4b90b7e15356a74e629a798283f8b
         size: 4209024
       - type: file
-        path: com.sublimemerge.App.appdata.xml
+        path: com.sublimemerge.App.metainfo.xml
       - type: file
         path: com.sublimemerge.App.desktop
       - type: file

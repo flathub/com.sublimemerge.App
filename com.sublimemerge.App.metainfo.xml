@@ -55,7 +55,7 @@
           <li>Fixed Edit Commit Message not working in work trees</li>
           <li>Fixed standalone merge tool not supporting the key binding for Next Conflict</li>
           <li>Fixed smerge mergetool not handling relative paths correctly</li>
-          <li>Fixed smerge log <dir> not working as expected</li>
+          <li>Fixed smerge log &#60;dir&#62; not working as expected</li>
           <li>Mac: Added a workaround for a macOS OpenGL driver bug in 10.14.4</li>
           <li>Linux: Fixed incorrect file ownership in the deb packages</li>
           <li>Linux: Added support for text drag and drop</li>

@@ -25,6 +25,66 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release date="2019-09-30" version="0.1119">
+      <description>
+        <p>BUILD 1119</p>
+        <ul>
+          <li>Fixed a regression where pack files over 32GB weren't being opened</li>
+          <li>Mac: Added Notarization</li>
+        </ul>
+      </description>
+    </release>
+    <release date="2019-06-03" version="0.1116">
+      <description>
+        <p>BUILD 1116</p>
+        <ul>
+          <li>Large files are now only diffed when clicked on</li>
+          <li>Merge Tool: Added Take Left and Take Right options</li>
+          <li>Merge Tool: Can now Save and Stage in one action</li>
+          <li>--no-verify can be passed when committing</li>
+          <li>Rebase Commit is now available in the context menu for all commits</li>
+          <li>Revert Commit now works with merge commits</li>
+          <li>Added separate key bindings for Stage All and Stage All Modified files for clarity</li>
+          <li>Added an explicit close button to the search bar</li>
+          <li>Table of Contents: Clicking an already selected row no longer closes the diff</li>
+          <li>Various syntax highlighting improvements</li>
+          <li>Improved behavior when doing a line restricted file history search and toggling ignore whitespace</li>
+          <li>Added support for the intent-to-add flag in the index</li>
+          <li>Fixed includeIf handling in git config files not interpreting ~ relative paths correctly</li>
+          <li>Fixed UTF8 BOMs not being handled correctly in .gitignore files</li>
+          <li>Fixed Edit Commit Message not working in work trees</li>
+          <li>Fixed standalone merge tool not supporting the key binding for Next Conflict</li>
+          <li>Fixed smerge mergetool not handling relative paths correctly</li>
+          <li>Fixed smerge log <dir> not working as expected</li>
+          <li>Mac: Added a workaround for a macOS OpenGL driver bug in 10.14.4</li>
+          <li>Linux: Fixed incorrect file ownership in the deb packages</li>
+          <li>Linux: Added support for text drag and drop</li>
+          <li>Linux: Improved high dpi handling under KDE</li>
+        </ul>
+      </description>
+    </release>
+    <release date="2019-03-12" version="0.1107">
+      <description>
+        <p>BUILD 1107</p>
+        <ul>
+          <li>The Contents section of the sidebar can now be switched between showing changed files and all files</li>
+          <li>Sublime Merge can now be used as a standalone merge tool, via the smerge command line helper. See smerge --help for details.</li>
+          <li>Merge tool: Improved UI for switching between the Base file and the Merged file</li>
+          <li>Added Navigate/Go to Parent menu item</li>
+          <li>Improved clone dialog</li>
+          <li>Improved side bar context menus</li>
+          <li>Various syntax highlighting improvements</li>
+          <li>Merge tool now indicates which lines have been modified in the merged file</li>
+          <li>Merge tool: swap_line_up, swap_line_down and duplicate_line commands are now supported</li>
+          <li>Fixed git flow commands appearing inconsistently</li>
+          <li>Mac: Add full support for macOS native tabs</li>
+          <li>Mac: Ensure context menus are shown without scrolling</li>
+          <li>Mac: Error message dialogs can now be closed with the escape key</li>
+          <li>Linux: Color glyphs are now drawn properly on light backgrounds</li>
+          <li>Windows: Fix DirectWrite handling of fonts with lineGap > 0</li>
+        </ul>
+      </description>
+    </release>
     <release date="2019-01-24" version="0.1103">
       <description>
         <p>BUILD 1103</p>

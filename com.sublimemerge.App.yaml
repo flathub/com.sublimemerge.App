@@ -15,6 +15,7 @@ finish-args:
   - --share=network
   - --filesystem=host  # uses the SDK's git binary directly, no portals
   - --own-name=com.sublimemerge  # app doesn't follow the app ID spec
+  - --device=dri
 
 modules:
   - name: git-lfs
@@ -60,9 +61,9 @@ modules:
       - type: extra-data
         only-arches: ["x86_64"]
         filename: sublime_merge.deb
-        url: https://download.sublimetext.com/sublime-merge_build-1119_amd64.deb
-        sha256: 3e65f8361b87d821c199ee70db3a0db4ce619d20a0e64a0d4559a0ecff6df9e8
-        size: 4216792
+        url: https://download.sublimetext.com/sublime-merge_build-2020_amd64.deb
+        sha256: f61e1015e1e85a6d35dec6af9cf2621deaa657ddb6f4e368b0109ad3ff97751e
+        size: 4352772
       - type: file
         path: com.sublimemerge.App.metainfo.xml
       - type: file

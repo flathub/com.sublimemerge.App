@@ -25,6 +25,149 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release date="2020-05-26" version="0.2020">
+        <description>
+          <p>BUILD 2020</p>
+          <p>General</p>
+          <ul>
+              <li>New UI, including repository tabs</li>
+              <li>GPU Rendering</li>
+              <li>UI: Reworked Commit Dialog</li>
+              <li>UI: Added repository tabs, to have multiple repositories open in a single window</li>
+              <li>UI: Added file tabs when viewing the contents of a commit</li>
+              <li>Implement commit signature creation and validation</li>
+              <li>Added a lines changed indicator to commits</li>
+              <li>Added command history, available from the Show Git Output icon in the tool bar</li>
+              <li>Added commit message history, available from the dropdown arrow in the commit message box</li>
+              <li>Added support for non-overlay scrollbars in diffs</li>
+              <li>Added Resolve Ours / Resolve Theirs dropdown to unmerged files</li>
+              <li>URLs in commit messages and git output can be opened via the context menu</li>
+              <li>Left and Right keys can be used to expand/collapse merge commits</li>
+              <li>Added Navigate/Go to Child</li>
+              <li>Stash commands no longer supply -q by default, to work around a bug in Git 2.24</li>
+              <li>Checking out a hidden ref will make the ref visible</li>
+              <li>Add Recent Repositories to Welcome Page</li>
+              <li>Search: Added before and after operators</li>
+              <li>Added set_preference and toggle_preference commands</li>
+              <li>Added gitflow publish support</li>
+              <li>Preferences: Updating settings via the preferences dialog no longer clears comments in the settings file</li>
+              <li>Preferences: Added Preferences entry for Ignore Whitespace in diffs</li>
+              <li>Added checks for pushDefault and pushRemote when pushing</li>
+              <li>Added Tools/Show Console</li>
+              <li>Improved selection behavior while loading large repositories</li>
+              <li>Improved menu auto hide behavior on Linux and Windows</li>
+              <li>Improved performance with a very large number of untracked or modified files</li>
+              <li>Improved performance in repositories with a large number of authors</li>
+              <li>Running smerge without any arguments will focus the current window, if any</li>
+              <li>Fixed not being able to commit when email is set to empty string</li>
+              <li>Fixed a bug in destination path calculation in the clone dialog</li>
+              <li>Fixed Create Tag with an empty message creating the tag incorrectly</li>
+              <li>Fixed hunk staging using the wrong encoding in some scenarios</li>
+              <li>Fixed shift+enter staging a file even when focus is in commit message box</li>
+          </ul>
+          
+          <p>Merge Tool</p>
+          <ul>
+              <li>Indentation settings are now automatically detected from the contents of the file</li>
+              <li>Saving a file with unresolved conflicts will warn before saving</li>
+              <li>Added a preference to trim trailing whitespace on save</li>
+          </ul>
+          
+          <p>GPU Rendering</p>
+          <ul>
+              <li>New hardware_acceleration setting will composite the UI on the GPU</li>
+              <li>By default, GPU rendering is enabled on Mac, and disabled on Windows and Linux. This can be changed via the Preferences dialog.</li>
+              <li>Details about the active GPU will be displayed in the Console</li>
+          </ul>
+          
+          <p>Git</p>
+          <ul>
+              <li>Git: Added support for smudge and clean filters, enabling Git LFS support</li>
+              <li>Git: Improved handling of the working-tree-encoding attribute</li>
+              <li>Git: Improved parsing of .gitattributes files</li>
+              <li>Git: Added support for GUI encoding config</li>
+              <li>Windows and Mac: Updated bundled Git to 2.26.2</li>
+              <li>Windows: Fixed core.worktree support</li>
+              <li>Submodules: Added Initialize All Submodules context menu</li>
+              <li>Submodules: The location bar now indicates the value of HEAD for each submodule</li>
+          </ul>
+          
+          <p>Editor Control</p>
+          <ul>
+              <li>Expanded draw_white_space setting, supporting leading and trailing white space</li>
+              <li>Unicode white space characters, such as the zero width no-break space, are now drawn as hex values. Controlled via draw_unicode_white_space setting.</li>
+              <li>Spell Checking: Added support for languages with upper case characters after start of word</li>
+              <li>Spell Checking: Updated dictionaries</li>
+              <li>Spell Checking: Added support for non-utf8 dictionaries</li>
+              <li>Spell Checking: System dictionaries are now available on Linux</li>
+              <li>Spell Checking: Dictionaries in ~/Library/Spelling are now available on Mac</li>
+              <li>Linux: Text drag and drop is now supported</li>
+              <li>Linux: Added support for alternate font weight names</li>
+              <li>Linux: Selection is no longer cleared when another application makes a selection</li>
+          </ul>
+          
+          <p>Text Commands</p>
+          <ul>
+              <li>Improved behavior of Wrap Paragraph</li>
+              <li>Improved behavior of Swap Lines</li>
+              <li>Added Selection/Expand Selection as a general mechanism to expand the selection</li>
+              <li>Selection/Split into Lines will now split a selection into words if the selection doesn't contain any newlines</li>
+              <li>Fixed swap_line_down not being able to swap an empty line onto the last line of a file</li>
+          </ul>
+          
+          <p>Input Handling</p>
+          <ul>
+              <li>Modifier key taps can now be used as part of a key binding. For example, ["ctrl", "ctrl"] will trigger when Ctrl is pressed twice without pressing any other keys in between.</li>
+              <li>Linux: AltGr can now be used in key bindings via altgr</li>
+              <li>Linux: Added a workaround for a touchscreen driver bug, which would cause right click and mouse scrolling to stop working</li>
+              <li>Linux: When the menu is hidden, pressing alt will show it</li>
+              <li>Linux: Improved compatibility with some keyboard layouts</li>
+              <li>Mac: Fix Pinyin input</li>
+              <li>Mac: Keypad keys can now be bound to as expected</li>
+              <li>Mac: Improved compatibility with some keyboard layouts</li>
+              <li>Windows, Linux: Hide mouse cursor when typing. Controlled via hide_pointer_while_typing setting.</li>
+              <li>Windows, Linux: Fixed being unable to bind Ctrl+Break</li>
+              <li>Windows: Improved IME support</li>
+              <li>Windows, Linux: Added Shift+F10 key binding to open the context menu</li>
+          </ul>
+          
+          <p>UI</p>
+          <ul>
+              <li>Added highlight_gutter and highlight_line_number settings</li>
+              <li>Themes now have a style property for title_bar element, for better integration with OS "dark modes"</li>
+              <li>Color Schemes: Added glow font option to color schemes</li>
+              <li>Color Schemes: Added support for the underline font style</li>
+              <li>Linux: Show sequential key bindings in the menu</li>
+              <li>Linux: Fixed context menu position being slightly offset</li>
+          </ul>
+          
+          <p>Rendering</p>
+          <ul>
+              <li>Windows, Linux: Added support for per-display subpixel ordering</li>
+              <li>Mac: Improved window resize performance</li>
+              <li>Windows: Fixed rendering bug where other applications could cause persistent artifacts via window animations</li>
+          </ul>
+          
+          <p>Application Behavior</p>
+          <ul>
+              <li>Added Safe Mode, to simulate a clean install. Enabled by passing --safe-mode on the command line.</li>
+              <li>Holding down Shift on Windows, or Option on macOS, will start Sublime Merge in Safe Mode</li>
+              <li>Settings containing a UTF-8 BOM will no longer fail to load</li>
+          </ul>
+          
+          <p>Syntax Definitions</p>
+          <ul>
+              <li>Added ability to "branch" within syntax definitions, for non-deterministic or multi-line constructs</li>
+              <li>Many syntax highlighting improvements, including significant improvements to:
+                  <ul>
+                      <li>Erlang, with thanks to <a href="https://github.com/deathaxe">deathaxe</a></li>
+                  </ul>
+              </li>
+              <li>Improved syntax definition load time</li>
+              <li>Fixed a performance issue with bounded repeats in regular expressions</li>
+          </ul>
+      </description>
+    </release>
     <release date="2019-09-30" version="0.1119">
       <description>
         <p>BUILD 1119</p>

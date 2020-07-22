@@ -26,8 +26,8 @@ modules:
     sources:
       - type: archive
         strip-components: 0
-        url: https://github.com/git-lfs/git-lfs/releases/download/v2.7.1/git-lfs-linux-amd64-v2.7.1.tar.gz
-        sha256: 7be85238cbbb957ab25de52b60279d40ba40d3faa72eeb2cb9fa77d6d92381e5
+        url: https://github.com/git-lfs/git-lfs/releases/download/v2.11.0/git-lfs-linux-amd64-v2.11.0.tar.gz
+        sha256: 46508eb932c2ec0003a940f179246708d4ddc2fec439dcacbf20ff9e98b957c9
   - name: sublime_merge
     buildsystem: simple
     build-commands:
@@ -79,7 +79,7 @@ modules:
           - --with-pic
         sources:
           - type: archive
-            url: https://github.com/ImageMagick/ImageMagick/archive/7.0.8-65.tar.gz
-            sha256: 14afaf722d8964ed8de2ebd8184a229e521f1425e18e7274806f06e008bf9aa7
+            url: https://github.com/ImageMagick/ImageMagick/archive/7.0.10-24.tar.gz
+            sha256: c555b4724127f9993500c9a7bab148e6075a7397957516b9e0dd9faa02d5c98e
         cleanup:
           - '*'

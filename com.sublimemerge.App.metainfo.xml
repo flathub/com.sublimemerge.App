@@ -25,6 +25,70 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release date="2020-07-22" version="0.2025">
+        <description>
+          <p>BUILD 2025</p>
+              
+          <p>New Features and Improvements 💎</p>
+          <ul>
+              <li>Added image diffs</li>
+              <li>Added Revert Hunk</li>
+              <li>Added rename_remote command</li>
+              <li>Added --set-upstream option to push menu</li>
+              <li>Added always_show_command_status preference</li>
+              <li>Commit Signatures: added GPG4Win support</li>
+              <li>Search: added tree operator, which matches commits with the given tree hash</li>
+              <li>Improved merge algorithm for merge tool</li>
+              <li>Improved gitflow finish support</li>
+              <li>Added drag-drop support to welcome page</li>
+          </ul>
+          
+          <p>Rendering 🎨</p>
+          <ul>
+              <li>Fixed several OpenGL related rendering issues</li>
+              <li>Color Schemes: Fixed text background drawing over underlines</li>
+          </ul>
+          
+          <p>Syntax Definitions 📝</p>
+          <ul>
+               <li>Added out of the box support for TypeScript and JSX, with thanks to <a href="https://github.com/Thom1729">Thomas Smith</a></li>
+              <li>Added "extends" keyword in .sublime-syntax</li>
+              <li>Added "version: 2" in .sublime-syntax to fix edge cases while retaining backwards compatibility</li>
+              <li>Added lazy loading of external "embed" actions</li>
+              <li>Reduced cache size on disk</li>
+              <li>Prevent infinite include loops via with_prototype</li>
+              <li>Improved matching performance and memory usage</li>
+              <li>Added "hidden_extensions" in .sublime-syntax</li>
+              <li>Allow combining "pop" with "push"/"set"/"embed"/"branch"</li>
+              <li>Fixed a number of scope related bugs</li>
+              <li>Fixed some regex capture related bugs</li>
+          </ul>
+          
+          <p>Input Handling ⌨️</p>
+          <ul>
+              <li>Added forward and back navigation to mousemap</li>
+              <li>Mac: Fixed ctrl+mouse1 not matching the behavior of mouse2</li>
+              <li>Windows: Fixed IME bugs</li>
+          </ul>
+          
+          <p>Miscellaneous Fixes 🐞</p>
+          <ul>
+              <li>Windows: safe mode is now activated via shift+alt</li>
+              <li>Search: fixed typographical error</li>
+              <li>Fixed git command output scrolling when output overflows dialog</li>
+              <li>Fixed freeze when switching tabs while command palette is open</li>
+              <li>Fixed some symlinks being incorrectly marked as modified on Windows</li>
+              <li>Session is now saved when application is notified of system shutdown</li>
+              <li>Improved contrast between selected and unselected repository tabs</li>
+              <li>Fixed minor file tab theming bugs</li>
+              <li>Fixed crash when core.ignorecase is enabled</li>
+              <li>Fixed crash when navigating to a commit message while rebasing</li>
+              <li>Location Bar: fixed incorrect branch count with nested branches</li>
+              <li>Files Bar: fixed selection regression in tree view</li>
+              <li>Fixed selection bug in command palette</li>
+          </ul>
+        </description>
+    </release>
     <release date="2020-05-26" version="0.2020">
         <description>
           <p>BUILD 2020</p>

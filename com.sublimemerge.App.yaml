@@ -61,9 +61,9 @@ modules:
       - type: extra-data
         only-arches: ["x86_64"]
         filename: sublime_merge.deb
-        url: https://download.sublimetext.com/sublime-merge_build-2025_amd64.deb
-        sha256: 58832c22c1b57d033da2ae778f76e93c23bf5bc58aedee37087507a3ddfd87c3
-        size: 4414628
+        url: https://download.sublimetext.com/sublime-merge_build-2032_amd64.deb
+        sha256: 43e53aedc98062d634fb043ee4683163ee2b79651e8112b11a0988e2f17bed32
+        size: 4485120
       - type: file
         path: com.sublimemerge.App.metainfo.xml
       - type: file

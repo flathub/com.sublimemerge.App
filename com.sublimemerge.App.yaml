@@ -3,7 +3,7 @@ app-id: com.sublimemerge.App
 command: sublime_merge
 
 runtime: org.freedesktop.Sdk
-runtime-version: '19.08'
+runtime-version: '20.08'
 sdk: org.freedesktop.Sdk
 
 separate-locales: false
@@ -26,8 +26,8 @@ modules:
     sources:
       - type: archive
         strip-components: 0
-        url: https://github.com/git-lfs/git-lfs/releases/download/v2.11.0/git-lfs-linux-amd64-v2.11.0.tar.gz
-        sha256: 46508eb932c2ec0003a940f179246708d4ddc2fec439dcacbf20ff9e98b957c9
+        url: https://github.com/git-lfs/git-lfs/releases/download/v2.12.0/git-lfs-linux-amd64-v2.12.0.tar.gz
+        sha256: f9befd0fa0b19517b8ed14ab07812f0d39d776d8c9ea0023e343e30ff300813f
   - name: sublime_merge
     buildsystem: simple
     build-commands:
@@ -79,7 +79,7 @@ modules:
           - --with-pic
         sources:
           - type: archive
-            url: https://github.com/ImageMagick/ImageMagick/archive/7.0.10-24.tar.gz
-            sha256: c555b4724127f9993500c9a7bab148e6075a7397957516b9e0dd9faa02d5c98e
+            url: https://github.com/ImageMagick/ImageMagick/archive/7.0.10-34.tar.gz
+            sha256: 0202a99644785f0bd9de611bb3141fbf579d707eea2dd8706165c9be8160966d
         cleanup:
           - '*'

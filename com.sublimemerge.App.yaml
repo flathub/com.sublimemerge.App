@@ -25,9 +25,15 @@ modules:
       - install -Dm755 git-lfs /app/libexec/git-lfs/
     sources:
       - type: archive
+        only-arches: ["x86_64"]
         strip-components: 0
         url: https://github.com/git-lfs/git-lfs/releases/download/v2.12.0/git-lfs-linux-amd64-v2.12.0.tar.gz
         sha256: f9befd0fa0b19517b8ed14ab07812f0d39d776d8c9ea0023e343e30ff300813f
+      - type: archive
+        only-arches: ["aarch64"]
+        strip-components: 0
+        url: https://github.com/git-lfs/git-lfs/releases/download/v2.12.0/git-lfs-linux-arm64-v2.12.0.tar.gz
+        sha256: df6aa720ad53c2549035589fd0a62246ce06b1c3c8e65c35d7ce1ee43f7bc29d
   - name: sublime_merge
     buildsystem: simple
     build-commands:
@@ -64,6 +70,12 @@ modules:
         url: https://download.sublimetext.com/sublime-merge_build-2032_amd64.deb
         sha256: 43e53aedc98062d634fb043ee4683163ee2b79651e8112b11a0988e2f17bed32
         size: 4485120
+      - type: extra-data
+        only-arches: ["aarch64"]
+        filename: sublime_merge.deb
+        url: https://download.sublimetext.com/sublime-merge_build-2032_arm64.deb
+        sha256: d23dec71b413733ccb641be2971d63bfe22ab445009fd8da2388dd65f0d75dad
+        size: 4380360
       - type: file
         path: com.sublimemerge.App.metainfo.xml
       - type: file

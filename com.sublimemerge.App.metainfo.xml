@@ -25,6 +25,73 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release date="2020-11-16" version="0.2039">
+      <description>
+        <p>Build 2039</p>
+        <ul>
+            <li>Updated Ctrl+R/Cmd+R to run navigate_to_branch> command</li>
+            <li>Updated refresh command keybinding to Ctrl+Shift+H/Cmd+Shift+H</li>
+            <li>Fixed crash when closing the preferences page</li>
+            <li>MacOS: fixed bug in batching of long Git commands</li>
+        </ul>
+      </description>
+    </release>
+    <release date="2020-10-30" version="0.2038">
+      <description>
+        <p>Build 2038</p>
+        <p>New Features and Improvements 💎</p>
+        <ul>
+            <li>Added commit graph theming improvements - branch colors now match graph edge colors</li>
+            <li>Updated custom git commands to support launching editor</li>
+            <li>Updated custom git commands to allow for selecting branches and other refs - see the docs for details</li>
+            <li>Improved commit dialog scroll tracking</li>
+            <li>Added navigate_to_stash command</li>
+            <li>Added Drop Stash… to the command palette</li>
+            <li>Tweaked merge algorithm to merge nearby conflicts</li>
+            <li>Updated clone page to trim leading and trailing whitespace</li>
+            <li>Updated create_branch/rename_branch command to convert whitespace to hyphens</li>
+            <li>Improved lexer performance</li>
+        </ul>
+
+        <p>Preferences 🎚️</p>
+        <ul>
+            <li>Added editor_wait_args to preferences</li>
+            <li>Added preference set GIT_SSH env var (useful for overriding the default SSH client)</li>
+            <li>Updated preference categories</li>
+        </ul>
+
+
+        <p>Git ⚙️</p>
+        <ul>
+            <li>Updated image diff file size limit</li>
+            <li>Fixed bug were commits only reachable by tags were not visible</li>
+            <li>Fixed edge case bug when staging single lines</li>
+            <li>Fixed revert hunk displaying success message in some failure cases</li>
+            <li>Fixed bug where some Scalar pack files weren't loaded</li>
+            <li>Windows: fixed bug with git config path resolution</li>
+        </ul>
+
+        <p>Miscellaneous Fixes 🐞</p>
+        <ul>
+            <li>Fixed incorrect ordering of commit dialog tabs</li>
+            <li>Fixed smerge not preserving session information in some situations</li>
+            <li>Fixed session loading bug with multiple repository tabs</li>
+            <li>Fixed bug with Korean IME</li>
+            <li>Fixed commit summary sizing bug</li>
+            <li>Fixed inability to scroll to the end of the commit dialog in some circumstances</li>
+            <li>Fixed invalid initialize submodule menu item</li>
+            <li>Renamed Show Branch… to Show Hidden Branch…</li>
+            <li>Fixed edge-case in delete_remote command</li>
+            <li>Fixed theme reloading twice</li>
+            <li>Fixed clone page not receiving input focus by default</li>
+            <li>OpenGL: fixed rendering issue due to AMD driver bug on Windows</li>
+            <li>OpenGL: fixed blurry checkboxes</li>
+            <li>OpenGL: improved bold rendering with bugged intel drivers</li>
+            <li>Syntax Definitions: fixed infinite loop bug</li>
+            <li>Syntax Definitions: renamed TypeScript to TSX, and added a new vanilla TypeScript syntax</li>
+        </ul>
+      </description>
+    </release>
     <release date="2020-07-22" version="0.2025">
       <description>
         <p>Build 2032</p>

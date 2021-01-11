@@ -14,6 +14,7 @@ finish-args:
   - --socket=ssh-auth  # for pushing to git remotes over SSH
   - --share=network
   - --filesystem=host  # uses the SDK's git binary directly, no portals
+  - --filesystem=xdg-run/gnupg:ro  # for signing commits
   - --own-name=com.sublimemerge  # app doesn't follow the app ID spec
   - --device=dri
 

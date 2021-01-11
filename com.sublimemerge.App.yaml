@@ -42,11 +42,10 @@ modules:
       - install sublime_merge.sh /app/bin/sublime_merge
       - install -Dm644 ${FLATPAK_ID}.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml
       - install -Dm644 ${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop
-     
       - for s in {32,64,128,256,512}; do
         convert "${FLATPAK_ID}.png" -resize "${s}" "${FLATPAK_ID}-${s}.png";
         install -Dm644 "${FLATPAK_ID}-${s}.png" "/app/share/icons/hicolor/${s}x${s}/apps/${FLATPAK_ID}.png";
-        done;  
+        done;
       - install apply_extra /app/bin
     sources:
       - type: script

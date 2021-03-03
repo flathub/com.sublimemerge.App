@@ -25,6 +25,79 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release date="2021-02-23" version="0.2047">
+      <description>
+        <p>BUILD 2047</p>
+        <p>New Features</p>
+        <ul>
+            <li>Location bar: find branches easily with the new filter bar</li>
+            <li>Location bar: ahead / behind indicators can now be clicked to push / pull</li>
+            <li>Location bar: branch folders now have context menus</li>
+            <li>Tags: added command to checkout tags</li>
+            <li>Tags: added command to delete remote tags</li>
+            <li>Stashes: added command to delete all stashes (git stash clear)</li>
+            <li>Push: added --no-verify option</li>
+            <li>Remote branches: added command to checkout corresponding local branch</li>
+            <li>Custom commands: select remotes with the new select_remote selector</li>
+            <li>Added resize_window command</li>
+            <li>Added commit message tooltip to each parent in the parents section of a commit</li>
+        </ul>
+
+        <p>Improvements</p>
+        <ul>
+            <li>Windows: upgraded the application title bar</li>
+            <li>Linux: upgraded the application title bar on Gnome</li>
+            <li>Image diffs: PSD, TGA, PPM, and PGM files now display a rich diff</li>
+            <li>Blame: significant loading time improvements</li>
+            <li>Commit graph: simplified context menus</li>
+            <li>Improved indentation detection</li>
+            <li>Switch Repository dialog: open new tabs via Ctrl key (Cmd for MacOS)</li>
+            <li>Updated Ctrl+R/Cmd+R to run navigate_to_branch command</li>
+            <li>Updated refresh command keybinding to Ctrl+Shift+H/Cmd+Shift+H</li>
+            <li>Updated diff titles to elide when space is limited</li>
+            <li>Updated theming of the files list</li>
+            <li>Added various syntax highlighting improvements</li>
+            <li>Detached HEAD state is now more explicit</li>
+            <li>Remember which workspace each window is in by default (controlled via the setting remember_workspace)</li>
+            <li>Parent folders of the currently checked out branch are now highlighted in the location bar</li>
+            <li>Navigation commands: a warning is displayed when exiting the merge tool</li>
+            <li>Askpass dialog now supports fingerprint input</li>
+            <li>Askpass dialog now detects keypad Enter</li>
+            <li>Added themed_title_bar setting</li>
+            <li>Menu files: added submenu IDs</li>
+            <li>Interactive rebase: the break flag is now supported</li>
+            <li>Mac: improved OpenGL rendering performance</li>
+            <li>Windows and Mac: Updated bundled Git to 2.29.2</li>
+            <li>Linux: added various performance optimisations</li>
+        </ul>
+
+        <p>Fixes</p>
+        <ul>
+            <li>Editing commits now signs the edited commits</li>
+            <li>Added back missing progress bar for long-running commands</li>
+            <li>Fixed newly cloned repositories not loading preferences</li>
+            <li>Previous commit messages are now saved per-repository</li>
+            <li>Fixed incorrect context menus displaying in location bar</li>
+            <li>Improved compatibility on filesystems with large timestamp imprecision</li>
+            <li>Fixed inability to revert files if their parent directory does not exist</li>
+            <li>Fixed crash when closing the preferences page</li>
+            <li>Fixed empty selections being rendered as a line</li>
+            <li>Fixed window positions not restoring correctly in certain situations</li>
+            <li>Mac: smerge now correctly restores window positions</li>
+            <li>Mac: updated icon to follow macOS 11 style</li>
+            <li>Mac: added a workaround for Apple M1 OpenGL graphics driver bug that caused text to be rendered incorrectly</li>
+            <li>Mac: fixed bug in batching of large Git commands</li>
+            <li>Mac: added workaround for the command line helper when app translocation is in effect</li>
+            <li>Windows: added a workaround for Intel OpenGL graphics driver bug that caused black bars at the top of some windows</li>
+            <li>Windows: fixed glyph rendering bugs</li>
+            <li>Windows: fixed flashing when using OpenGL and resizing a window</li>
+            <li>Windows: fixed bug in subpixel antialiasing</li>
+            <li>Linux and Mac: fixed clean and smudge filters hanging on certain files</li>
+            <li>Linux: fixed bug with the caret not moving after performing a text drag</li>
+            <li>Linux: fixed freezing on KDE Plasma</li>
+        </ul>
+      </description>
+    </release>
     <release date="2020-11-16" version="0.2039">
       <description>
         <p>Build 2039</p>

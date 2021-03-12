@@ -25,6 +25,20 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release date="2021-03-12" version="0.2049">
+      <description>
+          <p>BUILD 2049</p>
+          <ul>
+              <li>Allow command palette navigation with Tab / Shift + Tab</li>
+              <li>Fixed newlines appearing in the commit message history</li>
+              <li>Fixed blame tooltips not updating in certain circumstances</li>
+              <li>Fixed crash when staging files with certain file encodings</li>
+              <li>Windows and Mac: updated bundled Git to 2.30.2 (addresses CVE-2021-21300)</li>
+              <li>Windows: fixed clean and smudge filters hanging on certain files</li>
+              <li>Linux: improved application menu theming</li>
+          </ul>
+      </description>
+    </release>
     <release date="2021-02-23" version="0.2047">
       <description>
         <p>BUILD 2047</p>

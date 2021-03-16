@@ -67,15 +67,15 @@ modules:
       - type: extra-data
         only-arches: ["x86_64"]
         filename: sublime_merge.deb
-        url: https://download.sublimetext.com/sublime-merge_build-2047_amd64.deb
-        sha256: c01f3d102e49e940f7ea42cd37d1e3da8e0cba04eb22aed03bc81757c672b6c5
-        size: 4539492
+        url: https://download.sublimetext.com/sublime-merge_build-2049_amd64.deb
+        sha256: d1b27ca7fc008a18b835a72681379e6b3732c393ce8920d92377c18ac51c22b5
+        size: 4542548
       - type: extra-data
         only-arches: ["aarch64"]
         filename: sublime_merge.deb
-        url: https://download.sublimetext.com/sublime-merge_build-2047_arm64.deb
-        sha256: 54c5c3aaa9026a7adc1032d3018842dffbb78639363dce2846a2d9d7a614954a
-        size: 4433684
+        url: https://download.sublimetext.com/sublime-merge_build-2049_arm64.deb
+        sha256: 7e177dea8821b3c0d34c580c7d52939cc5b9accdd53fe37a7d8b9f1e61ed4019
+        size: 4444908
       - type: file
         path: com.sublimemerge.App.metainfo.xml
       - type: file

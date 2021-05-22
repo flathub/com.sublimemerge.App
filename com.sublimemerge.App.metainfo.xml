@@ -25,6 +25,37 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release date="2021-05-17" version="0.2056">
+      <description>
+        <p>BUILD 2056</p>
+	<ul>
+	  <li>Add $commit_message context variable for historical commits</li>
+	  <li>Fix memory leak on Windows</li>
+	</ul>
+      </description>
+    </release>
+    <release date="2021-05-04" version="0.2054">
+      <description>
+        <p>BUILD 2054</p>
+	<ul>
+	  <li>Mac releases now include native Apple Silicon binaries</li>
+	  <li>Easily filter through large filesets using the new files filter</li>
+	  <li>Cherry pick hunks using the … button on hunks</li>
+	  <li>Moving the caret in diffs now scrolls the viewport</li>
+	  <li>Added the chain command, which accepts a list of commands to run in its "commands" argument - useful for chaining Git commands together</li>
+	  <li>Improved default selection behavior for switch repository</li>
+	  <li>Commit message history: ensure entries are unique</li>
+	  <li>Added support for Scroll Bar.sublime-mousemap to customize scrollbar interaction</li>
+	  <li>Added "Report a Bug" entry in the Help menu</li>
+	  <li>Linux: use native file dialogs, allowing use of the KDE dialogs</li>
+	  <li>Windows: fixed clone dialog not pre-filling</li>
+	  <li>Fixed gpg signature verification hanging</li>
+	  <li>Fixed stale commit messages displaying when editing commit contents</li>
+	  <li>Fixed memory issue when rebasing</li>
+	  <li>Fixed command status popups not disappearing</li>
+	</ul>
+      </description>
+    </release>
     <release date="2021-03-12" version="0.2049">
       <description>
           <p>BUILD 2049</p>

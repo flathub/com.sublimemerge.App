@@ -15,7 +15,8 @@ finish-args:
   - --share=network
   - --filesystem=host  # uses the SDK's git binary directly, no portals
   - --filesystem=xdg-run/gnupg:ro  # for signing commits
-  - --own-name=com.sublimemerge  # app doesn't follow the app ID spec
+  - --talk-name=org.freedesktop.secrets # for access to the user's GPG keys for signing commits
+  - --own-name=com.sublimemerge # app doesn't follow the app ID spec
   - --device=dri
 
 modules:

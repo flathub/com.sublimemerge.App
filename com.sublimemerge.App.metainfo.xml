@@ -25,6 +25,42 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release date="2021-07-23" version="0.2059">
+      <p>BUILD 2059</p>
+      <h3>New Features and Improvements</h3>
+      <ul class="topic">
+          <li>Cherry Pick multiple commits via the commit graph and context menu</li>
+          <li>Cherry Pick: added support for the -x flag</li>
+          <li>Revert multiple commits via the commit graph and context menu</li>
+          <li>Set commit templates via the Git config variable commit.template</li>
+          <li>Hardware Acceleration: multiple performance improvements</li>
+          <li>Double click remote branches to create local branches in the Locations bar</li>
+          <li>Added Copy Repository Path to action menu</li>
+          <li>Added Update remote URL and Copy remote URL to remote context menu</li>
+          <li>Focus on the checked out branch using Ctrl+8 (Cmd+8 for MacOS)</li>
+          <li>Open recent commit messages using Ctrl+; (Cmd+; for MacOS)</li>
+          <li>Add Remote: name input is now validated</li>
+          <li>Updated "Pull" button to perform a fetch when in a detached HEAD state</li>
+          <li>Mac and Linux: open Quick Switch Repository via Ctrl+Alt+P/Cmd+Ctrl+P</li>
+          <li>Tweaked how the Push command is displayed in the command palette</li>
+          <li>Safe mode shortcuts can be disabled by creating a file in the data directory called. Disable Safe Mode Shortcut</li>
+      </ul>
+
+      <h3>Fixes</h3>
+      <ul class="topic">
+          <li>Fixed cherry picks failing when the parent folder doesn't exist</li>
+          <li>Restored missing Continue button when a cherry pick has been paused</li>
+          <li>Restored missing commit button when unmerged files are present</li>
+          <li>Fixed up/down behavior in command palette</li>
+          <li>Fixed image diffs failing to load Git LFS images</li>
+          <li>Fixed default input focus for the files list</li>
+          <li>Fixed Sublime Merge opening a new window via Sublime Text integrations</li>
+          <li>Fixed crash when closing window</li>
+          <li>Disabled discard command for staged files</li>
+          <li>Windows: fixed globs not being expanded sometimes</li>
+          <li>Linux: Improved cancel/ok dialog ordering consistency</li>
+      </ul>
+    </release>
     <release date="2021-05-17" version="0.2056">
       <description>
         <p>BUILD 2056</p>

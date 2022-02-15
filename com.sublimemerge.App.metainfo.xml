@@ -32,16 +32,16 @@
           <li>Search: Quickly write queries with auto-complete suggestions</li>
           <li>Improved OpenGL rendering performance by automatically batching together controls</li>
           <li>Fetch / Pull Command: Added ability to fetch tags</li>
-          <li>Merge Command: Merge unrelated histories using the <tt>allow-unrelated-histories</tt> flag</li>
+          <li>Merge Command: Merge unrelated histories using the allow-unrelated-histories flag</li>
           <li>Set Upstream Command: Indicate the current upstream in the list of remote branches</li>
           <li>Commit Details: Added context menus to commit metadata items</li>
-          <li>Commit Dialog: Stage submodule changes using <tt>Enter</tt></li>
-          <li>Commit Messages: Added support for <tt>strip</tt> and <tt>default</tt> modes of <tt>commit.cleanup</tt></li>
+          <li>Commit Dialog: Stage submodule changes using Enter</li>
+          <li>Commit Messages: Added support for strip and default modes of commit.cleanup</li>
           <li>Commit Messages: Warn when commit message only contains comments</li>
-          <li>Context Variables: Access the in-progress commit message via the <tt>commit_message</tt> variable</li>
-          <li>Settings: Highlight missing signatures and public keys as errors with <tt>signature_error_highlighting</tt></li>
-          <li>Settings: Added <tt>draw_unicode_bidi</tt> setting, which is enabled by default</li>
-          <li>Recent Repositories: Added <tt>Clear missing</tt> menu item</li>
+          <li>Context Variables: Access the in-progress commit message via the commit_message variable</li>
+          <li>Settings: Highlight missing signatures and public keys as errors with signature_error_highlighting</li>
+          <li>Settings: Added draw_unicode_bidi setting, which is enabled by default</li>
+          <li>Recent Repositories: Added Clear missing menu item</li>
           <li>Recent Repositories: Prompt to remove from list when opening non-existent repositories</li>
           <li>Clone Page: Added tooltips to clone page inputs</li>
       </ul>
@@ -57,7 +57,7 @@
         <li>Fixed crash when filtering table of contents</li>
         <li>Windows: Fixed crash when OpenGL initialization fails</li>
         <li>Mac and Windows: Fixed command line / terminal not taking focus after waiting</li>
-        <li>Mac: Fixed <tt>Window &gt; Merge All Windows</tt> merging minimized windows</li>
+        <li>Mac: Fixed Window &gt; Merge All Windows merging minimized windows</li>
         <li>Mac: Fixed native tabs restoration resulting in odd behavior</li>
         <li>Linux: Added missing libcurl dependency for package managers</li>
       </ul>

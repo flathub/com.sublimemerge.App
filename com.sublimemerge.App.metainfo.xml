@@ -25,7 +25,63 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="2074" date="2022-06-09"/>
+    <release version="2074" date="2022-06-09">
+      <p>Build 2074</p>
+      <h3>New Features and Improvements</h3>
+      <ul>
+        <li>Application: Added dialog to mark unsafe repositories as safe</li>
+        <li>Tags: Added tags to checkout command</li>
+        <li>Search: file and path queries now support absolute paths and Windows-style paths</li>
+        <li>Files List: Added context menu for commit files</li>
+        <li>Revert: Added warning when checking out a branch when a revert is in progress</li>
+        <li>Various syntax highlighting improvements</li>
+        <li>Added ruler_style setting</li>
+      </ul>
+
+      <h3>Fixes</h3>
+      <ul>
+        <li>Submodules: Fixed submodule diffs showing outdated hashes</li>
+        <li>Files List: Fixed discard filtered files ignoring the filter</li>
+        <li>Files List: Fixed files list filter applying to commit dialog context menus</li>
+        <li>Navigation: Fixed tab-navigation focusing on hidden dialogs</li>
+        <li>Filters: Fixed certain filters causing the application to hang</li>
+        <li>Commit Message: Removed extra padding in commit message input</li>
+        <li>Mac: Fixed bundled Git compatibility</li>
+        <li>Mac: Fixed context menu input focus bug</li>
+      </ul>
+    </release>
+    <release version="2071" date="2022-04-25">
+      <p>Build 2071</p>
+      <h3>New Features and Improvements</h3>
+      <ul>
+        <li>Files List: Stage filtered files using the file section context menus</li>
+        <li>Improved interface for staging/unstaging large changesets</li>
+        <li>Commit List: Added keyboard support for opening context menus</li>
+        <li>Branches: Combined all checkout commands into a single command</li>
+        <li>Branches: Added ability to unset upstreams</li>
+        <li>Search: Added auto-matching for quotes</li>
+        <li>Submodules: Added support for non-absorbed submodules</li>
+        <li>Create Tag: Added warning when tag name is invalid</li>
+      </ul>
+
+      <h3>Fixes</h3>
+      <ul>
+        <li>Fixed scroll position being lost when dropping a commit</li>
+        <li>Fixed scroll tracking when staging large files</li>
+        <li>Fixed commit message container layout issues</li>
+        <li>Fixed hunk container layout issue for large hunks</li>
+        <li>Fixed OpenGL rendering issue related to the wrong context being active</li>
+        <li>Fixed shadow related OpenGL rendering bug</li>
+        <li>Fixed potential for corrupted menu items in commit message history</li>
+        <li>Fixed back button not working in file history</li>
+        <li>Syntax Highlighting: Fixed crash caused by starting a branch point at the end of a line</li>
+        <li>Windows and Mac: Updated bundled Git to 2.35.3 (addresses CVE-2022-24765 and CVE-2022-24767)</li>
+        <li>Mac: Fixed Ctrl+Mouse1 not opening commit graph context menus</li>
+        <li>Mac: Added work around for broken modal loops</li>
+        <li>Linux: Follow system scroll bar overlay setting</li>
+        <li>Linux: Fixed various issues caused by the C locale</li>
+      </ul>
+    </release>
     <release date="2021-12-21" version="0.2068">
       <p>BUILD 2068</p>
       <h3>New Features and Improvements</h3>

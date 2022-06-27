@@ -25,6 +25,7 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="2074" date="2022-06-09"/>
     <release date="2021-12-21" version="0.2068">
       <p>BUILD 2068</p>
       <h3>New Features and Improvements</h3>
@@ -220,7 +221,7 @@
       <description>
         <p>Build 2039</p>
         <ul>
-            <li>Updated Ctrl+R/Cmd+R to run navigate_to_branch> command</li>
+            <li>Updated Ctrl+R/Cmd+R to run navigate_to_branch&gt; command</li>
             <li>Updated refresh command keybinding to Ctrl+Shift+H/Cmd+Shift+H</li>
             <li>Fixed crash when closing the preferences page</li>
             <li>MacOS: fixed bug in batching of long Git commands</li>

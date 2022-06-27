@@ -30,11 +30,21 @@ modules:
         strip-components: 0
         url: https://github.com/git-lfs/git-lfs/releases/download/v2.12.0/git-lfs-linux-amd64-v2.12.0.tar.gz
         sha256: f9befd0fa0b19517b8ed14ab07812f0d39d776d8c9ea0023e343e30ff300813f
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/git-lfs/git-lfs/releases/latest
+          url-query: .assets[] | select(.name=="git-lfs-linux-amd64-" + $version + ".tar.gz") | .browser_download_url
+          version-query: .tag_name
       - type: archive
         only-arches: ["aarch64"]
         strip-components: 0
         url: https://github.com/git-lfs/git-lfs/releases/download/v2.12.0/git-lfs-linux-arm64-v2.12.0.tar.gz
         sha256: df6aa720ad53c2549035589fd0a62246ce06b1c3c8e65c35d7ce1ee43f7bc29d
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/git-lfs/git-lfs/releases/latest
+          url-query: .assets[] | select(.name=="git-lfs-linux-arm64-" + $version + ".tar.gz") | .browser_download_url
+          version-query: .tag_name
   - name: sublime_merge
     buildsystem: simple
     build-commands:
@@ -70,12 +80,22 @@ modules:
         url: https://download.sublimetext.com/sublime-merge_build-2068_amd64.deb
         sha256: 847e81b9a9e51449490de2c45d19a77e4ac4a0b6dc61b2bf3c9ab102d666a9e4
         size: 4756288
+        x-checker-data:
+          type: html
+          url: https://www.sublimemerge.com/download_thanks
+          version-pattern: https://download.sublimetext.com/sublime-merge_build-([\d\.-]*)_amd64.deb
+          url-template: https://download.sublimetext.com/sublime-merge_build-${version}_amd64.deb
       - type: extra-data
         only-arches: ["aarch64"]
         filename: sublime_merge.deb
         url: https://download.sublimetext.com/sublime-merge_build-2068_arm64.deb
         sha256: 644e6429421dc48c792d9bd8d60e23acb5dfc21507b132e70359c9f840f5ec67
         size: 4670032
+        x-checker-data:
+          type: html
+          url: https://www.sublimemerge.com/download_thanks
+          version-pattern: https://download.sublimetext.com/sublime-merge_build-([\d\.-]*)_arm64.deb
+          url-template: https://download.sublimetext.com/sublime-merge_build-${version}_arm64.deb
       - type: file
         path: com.sublimemerge.App.metainfo.xml
       - type: file

@@ -5,6 +5,12 @@ runtime: org.freedesktop.Sdk
 runtime-version: '21.08'
 sdk: org.freedesktop.Sdk
 
+add-extensions:
+  org.freedesktop.Sdk.Extension.llvm13:
+    directory: clang
+    version: '21.08'
+    no-autodownload: false
+
 separate-locales: false
 finish-args:
   - --share=ipc
@@ -16,6 +22,8 @@ finish-args:
   - --filesystem=xdg-run/gnupg:ro  # for signing commits
   - --own-name=com.sublimemerge  # app doesn't follow the app ID spec
   - --device=dri
+  - --env=CLANG_FORMAT=python3 /app/clang/bin/clang-format
+  - --env=CLANG_FORMAT_DIFF=python3 /app/clang/share/clang/clang-format-diff.py
 
 modules:
   - name: git-lfs
@@ -102,6 +110,9 @@ modules:
         path: com.sublimemerge.App.desktop
       - type: file
         path: com.sublimemerge.App.png
+      - type: shell
+        commands:
+          - mkdir -p /app/clang
     modules:
       - name: ImageMagick
         config-opts:

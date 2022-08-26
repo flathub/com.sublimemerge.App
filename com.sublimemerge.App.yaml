@@ -45,6 +45,24 @@ modules:
           url-query: .assets[] | select(.name=="git-lfs-linux-arm64-" + $version +
             ".tar.gz") | .browser_download_url
           version-query: .tag_name
+  # Dependency for git-flow
+  - name: shFlags
+    buildsystem: simple
+    build-commands:
+      - install -m 0644 src/shflags ${FLATPAK_DEST}/bin/gitflow-shFlags
+    sources:
+      - type: git
+        url: https://github.com/nvie/shFlags.git
+        commit: 2fb06af13de884e9680f14a00c82e52a67c867f1
+  - name: git-flow
+    buildsystem: simple
+    build-commands:
+      - install -m 0755 git-flow ${FLATPAK_DEST}/bin
+      - install -m 0644 git-flow-init git-flow-feature git-flow-hotfix git-flow-release git-flow-support git-flow-version gitflow-common ${FLATPAK_DEST}/bin
+    sources:
+      - type: archive
+        url: https://github.com/nvie/gitflow/archive/refs/tags/0.4.1.tar.gz
+        sha256: c1271b0ba2c6655e4ad4d79562f6a910c3b884f3d4e16985e227e67f8d95c180
   - name: sublime_merge
     buildsystem: simple
     build-commands:

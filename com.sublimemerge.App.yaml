@@ -58,7 +58,8 @@ modules:
     buildsystem: simple
     build-commands:
       - install -m 0755 git-flow ${FLATPAK_DEST}/bin
-      - install -m 0644 git-flow-init git-flow-feature git-flow-hotfix git-flow-release git-flow-support git-flow-version gitflow-common ${FLATPAK_DEST}/bin
+      - install -m 0644 git-flow-init git-flow-feature git-flow-hotfix git-flow-release
+        git-flow-support git-flow-version gitflow-common ${FLATPAK_DEST}/bin
     sources:
       - type: archive
         url: https://github.com/nvie/gitflow/archive/refs/tags/0.4.1.tar.gz
@@ -95,9 +96,9 @@ modules:
       - type: extra-data
         only-arches: [x86_64]
         filename: sublime_merge.deb
-        url: https://download.sublimetext.com/sublime-merge_build-2077_amd64.deb
-        sha256: 2687bb33f03f346657b7b93651a720755222b0a5c100a6ecb55073afb915fa7c
-        size: 4865136
+        url: https://download.sublimetext.com/sublime-merge_build-2079_amd64.deb
+        sha256: 884090e0e8480f3eb886d652cc80b91f097b9ad2c9aedae7d55b33121eb7d4ad
+        size: 4887276
         x-checker-data:
           type: html
           url: https://www.sublimemerge.com/download_thanks
@@ -106,9 +107,9 @@ modules:
       - type: extra-data
         only-arches: [aarch64]
         filename: sublime_merge.deb
-        url: https://download.sublimetext.com/sublime-merge_build-2077_arm64.deb
-        sha256: 8c96493f7d1982f60c09fc7ae64e7ffd07fd54cb02571b6230a3fb3548b43557
-        size: 4774856
+        url: https://download.sublimetext.com/sublime-merge_build-2079_arm64.deb
+        sha256: 187b4934255766eb3ee03dbb145be2368e5d91ec8dbfe21b3dfd808e1ba380f2
+        size: 4785340
         x-checker-data:
           type: html
           url: https://www.sublimemerge.com/download_thanks

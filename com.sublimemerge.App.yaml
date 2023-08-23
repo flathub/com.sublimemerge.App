@@ -96,9 +96,9 @@ modules:
       - type: extra-data
         only-arches: [x86_64]
         filename: sublime_merge.deb
-        url: https://download.sublimetext.com/sublime-merge_build-2083_amd64.deb
-        sha256: e56103611e6b6c281bb489b4afc29175bc60a38bb3ae54b8f80d78e89e1e3896
-        size: 4981944
+        url: https://download.sublimetext.com/sublime-merge_build-2091_amd64.deb
+        sha256: eb7b9690c1459c9ded02083ea9b9137beb53709d7399dd8a60cfa9914cd3dc87
+        size: 5186928
         x-checker-data:
           type: html
           url: https://www.sublimemerge.com/download_thanks
@@ -107,9 +107,9 @@ modules:
       - type: extra-data
         only-arches: [aarch64]
         filename: sublime_merge.deb
-        url: https://download.sublimetext.com/sublime-merge_build-2083_arm64.deb
-        sha256: ddcca5f3c3c6fe7780a0fe3d0b4abe58943af3dbfdd2dbde7049f4fc9c080beb
-        size: 4907648
+        url: https://download.sublimetext.com/sublime-merge_build-2091_arm64.deb
+        sha256: 8790298e7c65984daded0d46fbcb0f5bb9f718f0a38a8c248651dcae00ec7e2a
+        size: 5136528
         x-checker-data:
           type: html
           url: https://www.sublimemerge.com/download_thanks

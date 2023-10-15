@@ -2,7 +2,7 @@ app-id: com.sublimemerge.App
 command: sublime_merge
 
 runtime: org.freedesktop.Sdk
-runtime-version: '21.08'
+runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 
 separate-locales: false
@@ -72,7 +72,7 @@ modules:
       - install sublime_merge.sh /app/bin/sublime_merge
       - install -Dm644 ${FLATPAK_ID}.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml
       - install -Dm644 ${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop
-      - for s in {32,64,128,256,512}; do convert "${FLATPAK_ID}.png" -resize "${s}"
+      - for s in {32,64,128,256,512}; do env MAGICK_TIME_LIMIT=30 convert "${FLATPAK_ID}.png" -resize "${s}"
         "${FLATPAK_ID}-${s}.png"; install -Dm644 "${FLATPAK_ID}-${s}.png" "/app/share/icons/hicolor/${s}x${s}/apps/${FLATPAK_ID}.png";
         done;
       - install apply_extra /app/bin
@@ -130,7 +130,7 @@ modules:
           - --with-pic
         sources:
           - type: archive
-            url: https://github.com/ImageMagick/ImageMagick/archive/7.0.10-34.tar.gz
-            sha256: 0202a99644785f0bd9de611bb3141fbf579d707eea2dd8706165c9be8160966d
+            url: https://github.com/ImageMagick/ImageMagick/archive/7.1.1-20.tar.gz
+            sha256: 8e2a0b5feaa6a8004b7d611e46984eb2217eeaff8347c5642e6ce84ecaf16446
         cleanup:
           - '*'

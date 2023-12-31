@@ -5,6 +5,12 @@ runtime: org.freedesktop.Sdk
 runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 
+add-extensions:
+  org.freedesktop.Sdk.Extension.llvm17:
+    directory: llvm
+    version: '23.08'
+    no-autodownload: true
+
 separate-locales: false
 finish-args:
   - --share=ipc
@@ -16,6 +22,7 @@ finish-args:
   - --filesystem=xdg-run/gnupg:ro  # for signing commits
   - --own-name=com.sublimemerge  # app doesn't follow the app ID spec
   - --device=dri
+  - --env=PATH=/usr/bin:/app/bin:/app/llvm/bin
 
 modules:
   - name: git-lfs
@@ -121,6 +128,9 @@ modules:
         path: com.sublimemerge.App.desktop
       - type: file
         path: com.sublimemerge.App.png
+      - type: shell
+        commands:
+          - mkdir -p /app/llvm
     modules:
       - name: ImageMagick
         config-opts:

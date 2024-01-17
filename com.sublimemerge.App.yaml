@@ -23,6 +23,7 @@ finish-args:
   - --own-name=com.sublimemerge # app doesn't follow the app ID spec
   - --device=dri
   - --env=PATH=/usr/bin:/app/bin:/app/llvm/bin
+  - --env=CLANG_FORMAT_DIFF=python3 /app/llvm/share/clang/clang-format-diff.py
 
 modules:
   - name: git-lfs

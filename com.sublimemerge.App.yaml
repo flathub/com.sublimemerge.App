@@ -2,13 +2,13 @@ app-id: com.sublimemerge.App
 command: sublime_merge
 
 runtime: org.freedesktop.Sdk
-runtime-version: "23.08"
+runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 
 add-extensions:
   org.freedesktop.Sdk.Extension.llvm17:
     directory: llvm
-    version: "23.08"
+    version: '23.08'
     no-autodownload: true
 
 separate-locales: false
@@ -39,20 +39,18 @@ modules:
         x-checker-data:
           type: json
           url: https://api.github.com/repos/git-lfs/git-lfs/releases/latest
-          url-query:
-            .assets[] | select(.name=="git-lfs-linux-amd64-" + $version +
+          url-query: .assets[] | select(.name=="git-lfs-linux-amd64-" + $version +
             ".tar.gz") | .browser_download_url
           version-query: .tag_name
       - type: archive
         only-arches: [aarch64]
         strip-components: 1
-        url: https://github.com/git-lfs/git-lfs/releases/download/v3.4.1/git-lfs-linux-arm64-v3.4.1.tar.gz
-        sha256: f93c5070223d95eb44fea0ee2f2db26656793d5f3417366f77dd20b9518c46ce
+        url: https://github.com/git-lfs/git-lfs/releases/download/v3.5.1/git-lfs-linux-arm64-v3.5.1.tar.gz
+        sha256: 4f8700aacaa0fd26ae5300fb0996aed14d1fd0ce1a63eb690629c132ff5163a9
         x-checker-data:
           type: json
           url: https://api.github.com/repos/git-lfs/git-lfs/releases/latest
-          url-query:
-            .assets[] | select(.name=="git-lfs-linux-arm64-" + $version +
+          url-query: .assets[] | select(.name=="git-lfs-linux-arm64-" + $version +
             ".tar.gz") | .browser_download_url
           version-query: .tag_name
   # Dependency for git-flow
@@ -146,4 +144,4 @@ modules:
             url: https://github.com/ImageMagick/ImageMagick/archive/7.1.1-20.tar.gz
             sha256: 8e2a0b5feaa6a8004b7d611e46984eb2217eeaff8347c5642e6ce84ecaf16446
         cleanup:
-          - "*"
+          - '*'

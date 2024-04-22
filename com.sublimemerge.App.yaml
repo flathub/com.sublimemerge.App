@@ -2,13 +2,13 @@ app-id: com.sublimemerge.App
 command: sublime_merge
 
 runtime: org.freedesktop.Sdk
-runtime-version: "23.08"
+runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 
 add-extensions:
   org.freedesktop.Sdk.Extension.llvm17:
     directory: llvm
-    version: "23.08"
+    version: '23.08'
     no-autodownload: true
 
 separate-locales: false
@@ -34,25 +34,23 @@ modules:
       - type: archive
         only-arches: [x86_64]
         strip-components: 1
-        url: https://github.com/git-lfs/git-lfs/releases/download/v3.4.1/git-lfs-linux-amd64-v3.4.1.tar.gz
-        sha256: 1772dc260961db27958088740b7e9ecebf945abad8c2d504d412448f53faf147
+        url: https://github.com/git-lfs/git-lfs/releases/download/v3.5.1/git-lfs-linux-amd64-v3.5.1.tar.gz
+        sha256: 6f28eb19faa7a968882dca190d92adc82493378b933958d67ceaeb9ebe4d731e
         x-checker-data:
           type: json
           url: https://api.github.com/repos/git-lfs/git-lfs/releases/latest
-          url-query:
-            .assets[] | select(.name=="git-lfs-linux-amd64-" + $version +
+          url-query: .assets[] | select(.name=="git-lfs-linux-amd64-" + $version +
             ".tar.gz") | .browser_download_url
           version-query: .tag_name
       - type: archive
         only-arches: [aarch64]
         strip-components: 1
-        url: https://github.com/git-lfs/git-lfs/releases/download/v3.4.1/git-lfs-linux-arm64-v3.4.1.tar.gz
-        sha256: f93c5070223d95eb44fea0ee2f2db26656793d5f3417366f77dd20b9518c46ce
+        url: https://github.com/git-lfs/git-lfs/releases/download/v3.5.1/git-lfs-linux-arm64-v3.5.1.tar.gz
+        sha256: 4f8700aacaa0fd26ae5300fb0996aed14d1fd0ce1a63eb690629c132ff5163a9
         x-checker-data:
           type: json
           url: https://api.github.com/repos/git-lfs/git-lfs/releases/latest
-          url-query:
-            .assets[] | select(.name=="git-lfs-linux-arm64-" + $version +
+          url-query: .assets[] | select(.name=="git-lfs-linux-arm64-" + $version +
             ".tar.gz") | .browser_download_url
           version-query: .tag_name
   # Dependency for git-flow
@@ -106,9 +104,9 @@ modules:
       - type: extra-data
         only-arches: [x86_64]
         filename: sublime_merge.deb
-        url: https://download.sublimetext.com/sublime-merge_build-2091_amd64.deb
-        sha256: eb7b9690c1459c9ded02083ea9b9137beb53709d7399dd8a60cfa9914cd3dc87
-        size: 5186928
+        url: https://download.sublimetext.com/sublime-merge_build-2096_amd64.deb
+        sha256: 81459fa0779b431c1fa50fd983343cbbfa28cc0791ec384ba952035818ba4d1a
+        size: 5022896
         x-checker-data:
           type: html
           url: https://www.sublimemerge.com/download_thanks
@@ -117,9 +115,9 @@ modules:
       - type: extra-data
         only-arches: [aarch64]
         filename: sublime_merge.deb
-        url: https://download.sublimetext.com/sublime-merge_build-2091_arm64.deb
-        sha256: 8790298e7c65984daded0d46fbcb0f5bb9f718f0a38a8c248651dcae00ec7e2a
-        size: 5136528
+        url: https://download.sublimetext.com/sublime-merge_build-2096_arm64.deb
+        sha256: 76fa404dc9f3067f60bb951699804e833adec18a6cf36fbaa7ce0d8749623407
+        size: 4929856
         x-checker-data:
           type: html
           url: https://www.sublimemerge.com/download_thanks
@@ -146,4 +144,4 @@ modules:
             url: https://github.com/ImageMagick/ImageMagick/archive/7.1.1-20.tar.gz
             sha256: 8e2a0b5feaa6a8004b7d611e46984eb2217eeaff8347c5642e6ce84ecaf16446
         cleanup:
-          - "*"
+          - '*'

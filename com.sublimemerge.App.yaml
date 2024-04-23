@@ -14,7 +14,7 @@ add-extensions:
 separate-locales: false
 finish-args:
   - --share=ipc
-  - --socket=x11
+  - --socket=fallback-x11
   - --socket=wayland
   - --socket=ssh-auth # for pushing to git remotes over SSH
   - --share=network

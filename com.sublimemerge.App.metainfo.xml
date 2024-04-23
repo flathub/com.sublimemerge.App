@@ -3,7 +3,9 @@
   <id>com.sublimemerge.App</id>
   <name>Sublime Merge</name>
   <project_license>LicenseRef-proprietary=https://www.sublimetext.com/eula</project_license>
-  <developer_name>Sublime HQ Pty Ltd</developer_name>
+  <developer id="com.sublimehq">
+    <name>Sublime HQ Pty Ltd</name>
+  </developer>
   <summary>Sublime Merge is a Git client, from the makers of Sublime Text</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <url type="homepage">https://www.sublimemerge.com/</url>
@@ -11,16 +13,19 @@
   <url type="help">https://forum.sublimetext.com/c/sublime-merge</url>
   <launchable type="desktop-id">com.sublimemerge.App.desktop</launchable>
   <description>
-    <p>Sublime Merge is a Git client, from the makers of Sublime Text.</p>
+    <p>Sublime Merge is a Git client, from the makers of Sublime Text. Line-by-line Staging. Commit Editing. Unmatched Performance.</p>
   </description>
   <screenshots>
     <screenshot type="default">
+      <caption>The commit view</caption>
       <image type="source">https://raw.githubusercontent.com/flathub/com.sublimemerge.App/master/screenshot-commit.png</image>
     </screenshot>
     <screenshot>
+      <caption>Searching through the log</caption>
       <image type="source">https://raw.githubusercontent.com/flathub/com.sublimemerge.App/master/screenshot-search.png</image>
     </screenshot>
     <screenshot>
+      <caption>Merge conflict resolution</caption>
       <image type="source">https://raw.githubusercontent.com/flathub/com.sublimemerge.App/master/screenshot-conflict.png</image>
     </screenshot>
   </screenshots>
@@ -30,134 +35,142 @@
     <release version="2079" date="2022-11-13"/>
     <release version="2077" date="2022-08-23"/>
     <release version="2074" date="2022-06-09">
-      <p>Build 2074</p>
-      <h3>New Features and Improvements</h3>
-      <ul>
-        <li>Application: Added dialog to mark unsafe repositories as safe</li>
-        <li>Tags: Added tags to checkout command</li>
-        <li>Search: file and path queries now support absolute paths and Windows-style paths</li>
-        <li>Files List: Added context menu for commit files</li>
-        <li>Revert: Added warning when checking out a branch when a revert is in progress</li>
-        <li>Various syntax highlighting improvements</li>
-        <li>Added ruler_style setting</li>
-      </ul>
+      <description>
+        <p>Build 2074</p>
+        <p>New Features and Improvements</p>
+        <ul>
+          <li>Application: Added dialog to mark unsafe repositories as safe</li>
+          <li>Tags: Added tags to checkout command</li>
+          <li>Search: file and path queries now support absolute paths and Windows-style paths</li>
+          <li>Files List: Added context menu for commit files</li>
+          <li>Revert: Added warning when checking out a branch when a revert is in progress</li>
+          <li>Various syntax highlighting improvements</li>
+          <li>Added ruler_style setting</li>
+        </ul>
 
-      <h3>Fixes</h3>
-      <ul>
-        <li>Submodules: Fixed submodule diffs showing outdated hashes</li>
-        <li>Files List: Fixed discard filtered files ignoring the filter</li>
-        <li>Files List: Fixed files list filter applying to commit dialog context menus</li>
-        <li>Navigation: Fixed tab-navigation focusing on hidden dialogs</li>
-        <li>Filters: Fixed certain filters causing the application to hang</li>
-        <li>Commit Message: Removed extra padding in commit message input</li>
-        <li>Mac: Fixed bundled Git compatibility</li>
-        <li>Mac: Fixed context menu input focus bug</li>
-      </ul>
+        <p>Fixes</p>
+        <ul>
+          <li>Submodules: Fixed submodule diffs showing outdated hashes</li>
+          <li>Files List: Fixed discard filtered files ignoring the filter</li>
+          <li>Files List: Fixed files list filter applying to commit dialog context menus</li>
+          <li>Navigation: Fixed tab-navigation focusing on hidden dialogs</li>
+          <li>Filters: Fixed certain filters causing the application to hang</li>
+          <li>Commit Message: Removed extra padding in commit message input</li>
+          <li>Mac: Fixed bundled Git compatibility</li>
+          <li>Mac: Fixed context menu input focus bug</li>
+        </ul>
+      </description>
     </release>
     <release version="2071" date="2022-04-25">
-      <p>Build 2071</p>
-      <h3>New Features and Improvements</h3>
-      <ul>
-        <li>Files List: Stage filtered files using the file section context menus</li>
-        <li>Improved interface for staging/unstaging large changesets</li>
-        <li>Commit List: Added keyboard support for opening context menus</li>
-        <li>Branches: Combined all checkout commands into a single command</li>
-        <li>Branches: Added ability to unset upstreams</li>
-        <li>Search: Added auto-matching for quotes</li>
-        <li>Submodules: Added support for non-absorbed submodules</li>
-        <li>Create Tag: Added warning when tag name is invalid</li>
-      </ul>
+      <description>
+        <p>Build 2071</p>
+        <p>New Features and Improvements</p>
+        <ul>
+          <li>Files List: Stage filtered files using the file section context menus</li>
+          <li>Improved interface for staging/unstaging large changesets</li>
+          <li>Commit List: Added keyboard support for opening context menus</li>
+          <li>Branches: Combined all checkout commands into a single command</li>
+          <li>Branches: Added ability to unset upstreams</li>
+          <li>Search: Added auto-matching for quotes</li>
+          <li>Submodules: Added support for non-absorbed submodules</li>
+          <li>Create Tag: Added warning when tag name is invalid</li>
+        </ul>
 
-      <h3>Fixes</h3>
-      <ul>
-        <li>Fixed scroll position being lost when dropping a commit</li>
-        <li>Fixed scroll tracking when staging large files</li>
-        <li>Fixed commit message container layout issues</li>
-        <li>Fixed hunk container layout issue for large hunks</li>
-        <li>Fixed OpenGL rendering issue related to the wrong context being active</li>
-        <li>Fixed shadow related OpenGL rendering bug</li>
-        <li>Fixed potential for corrupted menu items in commit message history</li>
-        <li>Fixed back button not working in file history</li>
-        <li>Syntax Highlighting: Fixed crash caused by starting a branch point at the end of a line</li>
-        <li>Windows and Mac: Updated bundled Git to 2.35.3 (addresses CVE-2022-24765 and CVE-2022-24767)</li>
-        <li>Mac: Fixed Ctrl+Mouse1 not opening commit graph context menus</li>
-        <li>Mac: Added work around for broken modal loops</li>
-        <li>Linux: Follow system scroll bar overlay setting</li>
-        <li>Linux: Fixed various issues caused by the C locale</li>
-      </ul>
+        <p>Fixes</p>
+        <ul>
+          <li>Fixed scroll position being lost when dropping a commit</li>
+          <li>Fixed scroll tracking when staging large files</li>
+          <li>Fixed commit message container layout issues</li>
+          <li>Fixed hunk container layout issue for large hunks</li>
+          <li>Fixed OpenGL rendering issue related to the wrong context being active</li>
+          <li>Fixed shadow related OpenGL rendering bug</li>
+          <li>Fixed potential for corrupted menu items in commit message history</li>
+          <li>Fixed back button not working in file history</li>
+          <li>Syntax Highlighting: Fixed crash caused by starting a branch point at the end of a line</li>
+          <li>Windows and Mac: Updated bundled Git to 2.35.3 (addresses CVE-2022-24765 and CVE-2022-24767)</li>
+          <li>Mac: Fixed Ctrl+Mouse1 not opening commit graph context menus</li>
+          <li>Mac: Added work around for broken modal loops</li>
+          <li>Linux: Follow system scroll bar overlay setting</li>
+          <li>Linux: Fixed various issues caused by the C locale</li>
+        </ul>
+      </description>
     </release>
     <release date="2021-12-21" version="0.2068">
-      <p>BUILD 2068</p>
-      <h3>New Features and Improvements</h3>
-      <ul>
-          <li>Search: Quickly write queries with auto-complete suggestions</li>
-          <li>Improved OpenGL rendering performance by automatically batching together controls</li>
-          <li>Fetch / Pull Command: Added ability to fetch tags</li>
-          <li>Merge Command: Merge unrelated histories using the allow-unrelated-histories flag</li>
-          <li>Set Upstream Command: Indicate the current upstream in the list of remote branches</li>
-          <li>Commit Details: Added context menus to commit metadata items</li>
-          <li>Commit Dialog: Stage submodule changes using Enter</li>
-          <li>Commit Messages: Added support for strip and default modes of commit.cleanup</li>
-          <li>Commit Messages: Warn when commit message only contains comments</li>
-          <li>Context Variables: Access the in-progress commit message via the commit_message variable</li>
-          <li>Settings: Highlight missing signatures and public keys as errors with signature_error_highlighting</li>
-          <li>Settings: Added draw_unicode_bidi setting, which is enabled by default</li>
-          <li>Recent Repositories: Added Clear missing menu item</li>
-          <li>Recent Repositories: Prompt to remove from list when opening non-existent repositories</li>
-          <li>Clone Page: Added tooltips to clone page inputs</li>
-      </ul>
+      <description>
+        <p>BUILD 2068</p>
+        <p>New Features and Improvements</p>
+        <ul>
+            <li>Search: Quickly write queries with auto-complete suggestions</li>
+            <li>Improved OpenGL rendering performance by automatically batching together controls</li>
+            <li>Fetch / Pull Command: Added ability to fetch tags</li>
+            <li>Merge Command: Merge unrelated histories using the allow-unrelated-histories flag</li>
+            <li>Set Upstream Command: Indicate the current upstream in the list of remote branches</li>
+            <li>Commit Details: Added context menus to commit metadata items</li>
+            <li>Commit Dialog: Stage submodule changes using Enter</li>
+            <li>Commit Messages: Added support for strip and default modes of commit.cleanup</li>
+            <li>Commit Messages: Warn when commit message only contains comments</li>
+            <li>Context Variables: Access the in-progress commit message via the commit_message variable</li>
+            <li>Settings: Highlight missing signatures and public keys as errors with signature_error_highlighting</li>
+            <li>Settings: Added draw_unicode_bidi setting, which is enabled by default</li>
+            <li>Recent Repositories: Added Clear missing menu item</li>
+            <li>Recent Repositories: Prompt to remove from list when opening non-existent repositories</li>
+            <li>Clone Page: Added tooltips to clone page inputs</li>
+        </ul>
 
-      <h3>Fixes</h3>
-      <ul class="topic">
-        <li>Commit Editing: Fixed author information being updated</li>
-        <li>Fixed lines with whitespace preceding comment characters being treated as comments</li>
-        <li>Fixed light changelog displaying when dark theme is enabled</li>
-        <li>Fixed crash when selecting previous commit messages containing certain UTF-8 sequences</li>
-        <li>Fixed issue with rebase branch preview</li>
-        <li>Fixed data corruption potentially occurring if a crash happens while saving the session</li>
-        <li>Fixed crash when filtering table of contents</li>
-        <li>Windows: Fixed crash when OpenGL initialization fails</li>
-        <li>Mac and Windows: Fixed command line / terminal not taking focus after waiting</li>
-        <li>Mac: Fixed Window &gt; Merge All Windows merging minimized windows</li>
-        <li>Mac: Fixed native tabs restoration resulting in odd behavior</li>
-        <li>Linux: Added missing libcurl dependency for package managers</li>
-      </ul>
+        <p>Fixes</p>
+        <ul class="topic">
+          <li>Commit Editing: Fixed author information being updated</li>
+          <li>Fixed lines with whitespace preceding comment characters being treated as comments</li>
+          <li>Fixed light changelog displaying when dark theme is enabled</li>
+          <li>Fixed crash when selecting previous commit messages containing certain UTF-8 sequences</li>
+          <li>Fixed issue with rebase branch preview</li>
+          <li>Fixed data corruption potentially occurring if a crash happens while saving the session</li>
+          <li>Fixed crash when filtering table of contents</li>
+          <li>Windows: Fixed crash when OpenGL initialization fails</li>
+          <li>Mac and Windows: Fixed command line / terminal not taking focus after waiting</li>
+          <li>Mac: Fixed Window &gt; Merge All Windows merging minimized windows</li>
+          <li>Mac: Fixed native tabs restoration resulting in odd behavior</li>
+          <li>Linux: Added missing libcurl dependency for package managers</li>
+        </ul>
+      </description>
     </release>
     <release date="2021-07-23" version="0.2059">
-      <p>BUILD 2059</p>
-      <h3>New Features and Improvements</h3>
-      <ul class="topic">
-          <li>Cherry Pick multiple commits via the commit graph and context menu</li>
-          <li>Cherry Pick: added support for the -x flag</li>
-          <li>Revert multiple commits via the commit graph and context menu</li>
-          <li>Set commit templates via the Git config variable commit.template</li>
-          <li>Hardware Acceleration: multiple performance improvements</li>
-          <li>Double click remote branches to create local branches in the Locations bar</li>
-          <li>Added Copy Repository Path to action menu</li>
-          <li>Added Update remote URL and Copy remote URL to remote context menu</li>
-          <li>Focus on the checked out branch using Ctrl+8 (Cmd+8 for MacOS)</li>
-          <li>Open recent commit messages using Ctrl+; (Cmd+; for MacOS)</li>
-          <li>Add Remote: name input is now validated</li>
-          <li>Updated "Pull" button to perform a fetch when in a detached HEAD state</li>
-          <li>Mac and Linux: open Quick Switch Repository via Ctrl+Alt+P/Cmd+Ctrl+P</li>
-          <li>Tweaked how the Push command is displayed in the command palette</li>
-          <li>Safe mode shortcuts can be disabled by creating a file in the data directory called. Disable Safe Mode Shortcut</li>
-      </ul>
+      <description>
+        <p>BUILD 2059</p>
+        <p>New Features and Improvements</p>
+        <ul class="topic">
+            <li>Cherry Pick multiple commits via the commit graph and context menu</li>
+            <li>Cherry Pick: added support for the -x flag</li>
+            <li>Revert multiple commits via the commit graph and context menu</li>
+            <li>Set commit templates via the Git config variable commit.template</li>
+            <li>Hardware Acceleration: multiple performance improvements</li>
+            <li>Double click remote branches to create local branches in the Locations bar</li>
+            <li>Added Copy Repository Path to action menu</li>
+            <li>Added Update remote URL and Copy remote URL to remote context menu</li>
+            <li>Focus on the checked out branch using Ctrl+8 (Cmd+8 for MacOS)</li>
+            <li>Open recent commit messages using Ctrl+; (Cmd+; for MacOS)</li>
+            <li>Add Remote: name input is now validated</li>
+            <li>Updated "Pull" button to perform a fetch when in a detached HEAD state</li>
+            <li>Mac and Linux: open Quick Switch Repository via Ctrl+Alt+P/Cmd+Ctrl+P</li>
+            <li>Tweaked how the Push command is displayed in the command palette</li>
+            <li>Safe mode shortcuts can be disabled by creating a file in the data directory called. Disable Safe Mode Shortcut</li>
+        </ul>
 
-      <h3>Fixes</h3>
-      <ul class="topic">
-          <li>Fixed cherry picks failing when the parent folder doesn't exist</li>
-          <li>Restored missing Continue button when a cherry pick has been paused</li>
-          <li>Restored missing commit button when unmerged files are present</li>
-          <li>Fixed up/down behavior in command palette</li>
-          <li>Fixed image diffs failing to load Git LFS images</li>
-          <li>Fixed default input focus for the files list</li>
-          <li>Fixed Sublime Merge opening a new window via Sublime Text integrations</li>
-          <li>Fixed crash when closing window</li>
-          <li>Disabled discard command for staged files</li>
-          <li>Windows: fixed globs not being expanded sometimes</li>
-          <li>Linux: Improved cancel/ok dialog ordering consistency</li>
-      </ul>
+        <p>Fixes</p>
+        <ul class="topic">
+            <li>Fixed cherry picks failing when the parent folder doesn't exist</li>
+            <li>Restored missing Continue button when a cherry pick has been paused</li>
+            <li>Restored missing commit button when unmerged files are present</li>
+            <li>Fixed up/down behavior in command palette</li>
+            <li>Fixed image diffs failing to load Git LFS images</li>
+            <li>Fixed default input focus for the files list</li>
+            <li>Fixed Sublime Merge opening a new window via Sublime Text integrations</li>
+            <li>Fixed crash when closing window</li>
+            <li>Disabled discard command for staged files</li>
+            <li>Windows: fixed globs not being expanded sometimes</li>
+            <li>Linux: Improved cancel/ok dialog ordering consistency</li>
+        </ul>
+      </description>
     </release>
     <release date="2021-05-17" version="0.2056">
       <description>
@@ -413,7 +426,7 @@
         </ul>
         <p>Syntax Definitions 📝</p>
         <ul>
-          <li>Added out of the box support for TypeScript and JSX, with thanks to <a href="https://github.com/Thom1729">Thomas Smith</a></li>
+          <li>Added out of the box support for TypeScript and JSX, with thanks to Thomas Smith</li>
           <li>Added "extends" keyword in .sublime-syntax</li>
           <li>Added "version: 2" in .sublime-syntax to fix edge cases while retaining backwards compatibility</li>
           <li>Added lazy loading of external "embed" actions</li>
@@ -572,9 +585,7 @@
         <p>Syntax Definitions</p>
         <ul>
           <li>Added ability to "branch" within syntax definitions, for non-deterministic or multi-line constructs</li>
-          <li>Many syntax highlighting improvements, including significant improvements to:
-                  <ul><li>Erlang, with thanks to <a href="https://github.com/deathaxe">deathaxe</a></li></ul>
-              </li>
+          <li>Many syntax highlighting improvements, including significant improvements to: Erlang, with thanks to deathaxe</li>
           <li>Improved syntax definition load time</li>
           <li>Fixed a performance issue with bounded repeats in regular expressions</li>
         </ul>

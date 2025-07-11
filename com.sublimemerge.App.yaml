@@ -2,13 +2,13 @@ app-id: com.sublimemerge.App
 command: sublime_merge
 
 runtime: org.freedesktop.Sdk
-runtime-version: '23.08'
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 
 add-extensions:
   org.freedesktop.Sdk.Extension.llvm17:
     directory: llvm
-    version: '23.08'
+    version: '24.08'
     no-autodownload: true
 
 separate-locales: false

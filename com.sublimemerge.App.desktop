@@ -10,3 +10,4 @@ MimeType=text/plain;
 Icon=com.sublimemerge.App
 Categories=Development;RevisionControl;
 StartupNotify=true
+StartupWMClass=sublime_merge

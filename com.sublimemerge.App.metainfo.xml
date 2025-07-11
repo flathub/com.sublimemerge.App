@@ -9,11 +9,12 @@
   <summary>Sublime Merge is a Git client, from the makers of Sublime Text</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <url type="homepage">https://www.sublimemerge.com/</url>
-  <url type="bugtracker">https://github.com/sublimehq/sublime_merge</url>
+  <url type="bugtracker">https://github.com/flathub/com.sublimemerge.App/issues</url>
   <url type="help">https://forum.sublimetext.com/c/sublime-merge</url>
   <launchable type="desktop-id">com.sublimemerge.App.desktop</launchable>
   <description>
     <p>Sublime Merge is a Git client, from the makers of Sublime Text. Line-by-line Staging. Commit Editing. Unmatched Performance.</p>
+    <p>This flatpak is not supported by Sublime HQ Pty Ltd. Please report issues to the flathub manifest repository.</p>
   </description>
   <screenshots>
     <screenshot type="default">

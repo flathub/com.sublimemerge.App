@@ -6,7 +6,7 @@ runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 
 add-extensions:
-  org.freedesktop.Sdk.Extension.llvm17:
+  org.freedesktop.Sdk.Extension.llvm20:
     directory: llvm
     version: '24.08'
     no-autodownload: true
